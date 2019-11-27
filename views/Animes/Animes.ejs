@@ -1,0 +1,35 @@
+<%include ../partials/header%>
+
+<div class="container">
+	
+    
+    
+	<header class="jumbotron">
+		<div class="container">
+			<h1>Welcome To My Favourite Anime Page</h1>
+			<p>GO CHECK OUT THESE ANIMES OR DIE</p>
+			<a class="btn-lg btn-primary" href="/Animes/new">Add New Anime</a>
+		</div>
+	</header>
+	<!-- display:flex; flex-wrap:warp; for flex -->
+	<div class="row">
+		<% Animes.forEach(function(Animes){ %>
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail">
+				<img src="<%= Animes.image %>">
+			</div>
+			<div class="caption"><h4><%=Animes.name %></h4></div>
+			<div><a class="btn btn-primary" href="/Animes/<%=Animes._id %>">Show More</a></div>
+			
+		
+
+			
+		</div>
+		<%  })%>
+
+	</div>
+
+
+</div>
+
+<%include ../partials/footer%>
